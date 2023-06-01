@@ -1,0 +1,203 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Swastik Sharma} \\[8.5pt]
+\href{https://github.com/swastkk}{\raisebox{-0.05\height}\faGithub\ swastkk} \ $|$ \ 
+\href{https://linkedin.com/in/swastkk}{\raisebox{-0.05\height}\faLinkedin\ swastkk} \ $|$ \ 
+\href{https://swastiksharma.me}{\raisebox{-0.05\height}\faGlobe \ swastiksharma.me} \ $|$ \ 
+\href{mailto:swastkk@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ swastkk@gmail.com} \ $|$ \ 
+\href{tel:+91 9805279184}{\raisebox{-0.05\height}\faMobile \ +91 9805279184} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+
+\textbf{NIT Hamirpur}&{B.TECH, Electrical Engineering}(GPA: 8.13/10.0)  \hfill Dec 2021 - present\\ 
+
+\textbf{GSSS Daulatpur Chowk}&{12th HP Board} (90\%) \hfill  April 19 - April 2021 \\
+
+\textbf{DAV Ambota}&{10th CBSE Board} (96.2\%) \hfill April 2010 - April 2019 \\
+
+\end{tabularx}
+
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Languages:} &  \normalsize{Python, C, HTML, CSS, JavaScript}\\
+\textbf{Frameworks:}  &  \normalsize{Django, Django-REST Framework}\\  
+\textbf{Tools:} &  \normalsize{Git/GitHub, GitLab, PostgreSQL, Jinja} \\
+\textbf{Plateforms:} &  \normalsize{Linux, Web, Windows}\\
+\textbf{Soft Skills:} &  \normalsize{Teamwork, Leadership, Communication}\\
+\end{tabularx}
+
+%Experience
+\section{Work Experience}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Luminous Power Technologies, Gagret}& \emph{Industrial Training} \hfill May 2023 - present \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Two Month Industrial Training in Core Electrical at Manufacturing and PLC programing.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{ISTE-NITH}&\emph{Executive Member} \hfill Jan 2022 - present \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+{Student’s Chapter of ISTE at our institute where I work in basically Technical domain and Event management.}
+}
+\end{tabularx}
+
+%Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{EDU-BOT} & \hfill \href{https://github.com/swastkk/eduBOT}{Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{eduBOT is a Python-based web-app that utilizes Natural Language Processing (NLP) and machine learning techniques to provide accurate and relevant responses to the school and college level students.. The eduBOT project aims to provide three features which includes “BookBuddy”, “YoutubePlus” and “Learn it”.}  \\
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{INTERVIEW'S WEBSITE} & \hfill \href{https://github.com/istenith/join.istenith.com}{Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Created a Django based web app for the interviews purpose having more than 500+ college students
+registered and was the replacement of google forms.}  \\
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{EASY-FILE-SHARE} & \hfill \href{https://github.com/swastkk/Easy-File-Share}{Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Django-REST web app to share files in the form of URLs and Just upload the files, it will convert all
+uploaded files into one zip file and then, after sharing the URL, it will auto download the zip, which contains
+that uploaded files.}  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%Interests/ Keywords/ AWARDS
+\section{Awards}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Electrothon 5.0} & \hfill April, 2023 \\
+\multicolumn{2}{@{}X@{}}{Our team was 2nd Runners up and won a Cash Prize of 10,000INR in the Electrothon organised by Team SPEC of NIT Hamirpur in which over 70+ Teams participated.} \\
+\end{tabularx}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{ASCENSIO-Open exhibition}& \hfill April, 2023 \\
+\multicolumn{2}{@{}X@{}}{Our team was 2nd runners up in the Open Exhibition organized in the Annual TechFest of NIT Hamirpur (NIMBUS) and was awarded with 5000INR cash prize} \\
+\end{tabularx}
+%----------------------------------------------------------------------------------------
+
+
+
+\end{document}
