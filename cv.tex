@@ -1,14 +1,38 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
 %----------------------------------------------------------------------------------------
 %	DOCUMENT DEFINITION
 %----------------------------------------------------------------------------------------
 
+% article class because we want to fully customize the page and not use a cv template
 \documentclass[legalpaper,11pt]{article}
 
 %----------------------------------------------------------------------------------------
 %	FONT
 %----------------------------------------------------------------------------------------
 
-% % fontspec allows to use TTF/OTF fonts directly
+% % fontspec allows you to use TTF/OTF fonts directly
 % \usepackage{fontspec}
 % \defaultfontfeatures{Ligatures=TeX}
 
@@ -97,10 +121,10 @@
 \end{tabularx}
 
 \begin{flushleft}
+\href{https://www.swastiksharma.in}{\raisebox{-0.05\height}\faGlobe \ swastiksharma.in} \ $|$ \
+\href{mailto:swastkk@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ swastkk@gmail.com} \ $|$ \ 
 \href{https://github.com/swastkk}{\raisebox{-0.05\height}\faGithub\ swastkk} \ $|$ \ 
 \href{https://linkedin.com/in/swastkk}{\raisebox{-0.05\height}\faLinkedin\ swastkk} \ $|$ \ 
-\href{https://swastiksharma.me}{\raisebox{-0.05\height}\faGlobe \ swastiksharma.me} \ $|$ \ 
-\href{mailto:swastkk@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ swastkk@gmail.com} \ $|$ \ 
 \href{tel:+91 9805279184}{\raisebox{-0.05\height}\faMobile \ +91 9805279184} \\
 \end{flushleft}
 
@@ -113,7 +137,7 @@
 \section{Education}
 
 \begin{tabular}{lllll}
-\textbf{NIT Hamirpur}         & B.TECH, Electrical Engineering & CGPA: 7.97/10 & Dec 2021- present   &  \\
+\textbf{NIT Hamirpur}         & B.TECH, Electrical Engineering & CGPA: 7.92/10 & Dec 2021- present   &  \\
 \textbf{GSSS Daulatpur Chowk} & Class 12th, HP Board           & 90\%          & Apr 2019 - May 2021 &  \\
 \textbf{DAV Ambota}           & Class 10th, CBSE Board         & 96.2\%        & Apr 2010- Apr 2019  &  \\
                                   
@@ -126,7 +150,7 @@
 \textbf{Languages:} &  \normalsize{Rust, GO lang, Python, C, C++, HTML, CSS, JavaScript,SQL}\\
 \textbf{Frameworks:}  &  \normalsize{Tauri, ReactJS, NextJS, Django, Flask, FastAPI, Django-REST Framework, Svelte, Hugo}\\  
 \textbf{Tools:} &  \normalsize{Git/GitHub, GitHub Actions, GitLab, Postman, PostgreSQL, Jinja, LATEX} \\
-\textbf{Plateforms:} &  \normalsize{Linux, Web, Windows, Raspberry Pi, Arduino}\\
+\textbf{Platforms:} &  \normalsize{Linux, Web, Windows, Raspberry Pi, Arduino}\\
 \textbf{Soft Skills:} &  \normalsize{Teamwork, Leadership, Communication}\\
 \end{tabularx}
 
@@ -179,12 +203,6 @@ Student’s Chapter of ISTE (Indian Society for Technical Education) at our inst
 % \textbf{GO Microservices} & \hfill \href{https://github.com/swastkk/go_microservices}{Link} \\[3.75pt]
 % \multicolumn{2}{@{}X@{}} {Robust and Scalable microservices architecture built using the Go programming language. It leverages the power and simplicity of Go to create a modular and efficient system that can be easily extended and maintained.}  \\
 % \end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{EDU-BOT} $|$ Python, Django, PostgreSQL, HTML, CSS & \hfill \href{https://github.com/swastkk/eduBOT}{Link} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{eduBOT is a Python-based web-app that utilizes Natural Language Processing (NLP) and machine learning techniques to provide accurate and relevant responses to the school and college level students.}  \\
-\end{tabularx}
-
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{INTERVIEW'S WEBSITE} $|$ Python, Django, Docker, PostgreSQL, Celery & \hfill \href{https://github.com/istenith/join.istenith.com}{Link} \\[3.75pt]
 \multicolumn{2}{@{}X@{}}{Created a Django based web app for the interviews purpose having more than 500+ college students
@@ -192,8 +210,14 @@ registered and was the replacement of google forms.}  \\
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{EASY-FILE-SHARE} $|$ Django, Django-REST Framework, Python & \hfill \href{https://github.com/swastkk/Easy-File-Share}{Link} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Django-REST web app to share files in the form of URLs and Just upload the files, it will convert uploaded files into one zip file and on sharing the URL, it will auto download the zip, which contains that uploaded files.}  \\
+\textbf{EDU-BOT} $|$ Python, Django, PostgreSQL, HTML, CSS & \hfill \href{https://github.com/swastkk/eduBOT}{Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{eduBOT is a Python-based web-app that utilizes Natural Language Processing (NLP) and machine learning techniques to provide accurate and relevant responses to the school and college level students.}  \\
+\end{tabularx}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{PRODYOGIKI'24} $|$ NextJS, Django, DRF, Docker, PostgreSQL & \hfill \href{https://github.com/istenith/prody-frontend}{Frontend} $|$ \href{https://github.com/istenith/prody-backend}{Backend} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{
+Build Full Stack Website that seamlessly combines cutting-edge technology, with Next.js for the frontend and Django for the backend, to provide an interactive experience for organising team, participants, and enthusiasts.}  \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -208,17 +232,16 @@ registered and was the replacement of google forms.}  \\
 \multicolumn{2}{@{}X@{}}{We secured the 2nd runners-up position at the Open Exhibition during NIT Hamirpur's Annual TechFest (NIMBUS) and received a 5000 INR cash prize.} \\
 \end{tabularx}
 %---------------------------------------------------------------------------------------
--
 
 %	EXTRA CURRICULAR AND POSITION OF RESPONSIBILITY
 %----------------------------------------------------------------------------------------
 \section{Extra Curricular $|$ \normalsize{Position of Responsibility}}
 \begin{itemize}[leftmargin=*]
-    \item \textbf{Co-ordinator} |Indian Society for Technical, Education
+    \item \textbf{Co-ordinator} |Indian Society for Technical Education, NIT Hamirpur Chapter
     \item \textbf{Joint Secretary} | Prodyogiki 2024, Annual Techfest organised by ISTE-NITH
-    \item \textbf{Co-ordinator}| Pahal, which is an initiative of ISTE NITH to help fresher in their admission procedure.
+    \item \textbf {Team Lead}| Finalist in Hack.AI at TECHFEST IIT BOMBAY, Dec 2023
     \item \textbf {Developer} | GNU/Linux User's Group, NIT Hamirpur
-    \item \textbf {Team Lead}| Participated in IIT-BHU Techfest i.e. Technex 2023
+    \item \textbf {Team Lead}| Participated in IIT-BHU Techfest i.e. TECHNEX, Mar 2023
 
 \end{itemize}
 
