@@ -1,28 +1,4 @@
-%----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
-%----------------------------------------------------------------------------------------
-
 \documentclass[legalpaper,11pt]{article}
-
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% % fontspec allows to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES
-%----------------------------------------------------------------------------------------
 \usepackage{url}
 \usepackage{parskip} 	
 
@@ -52,8 +28,6 @@
 \usepackage{multicol}
 \usepackage{multirow}
 
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
@@ -73,23 +47,10 @@
 %debug page outer frames
 %\usepackage{showframe}
 
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
 \begin{document}
 
-% non-numbered pages
 \pagestyle{empty} 
 
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
-
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} l X @{}}
 \Huge{SWASTIK SHARMA} & \small{Open Source $|$ Programmer $|$ Linux Enthusiast} \\[6pt]
@@ -99,17 +60,12 @@
 \begin{flushleft}
 \href{https://github.com/swastkk}{\raisebox{-0.05\height}\faGithub\ swastkk} \ $|$ \ 
 \href{https://linkedin.com/in/swastkk}{\raisebox{-0.05\height}\faLinkedin\ swastkk} \ $|$ \ 
-\href{https://swastiksharma.me}{\raisebox{-0.05\height}\faGlobe \ swastiksharma.me} \ $|$ \ 
+\href{https://swastiksharma.in}{\raisebox{-0.05\height}\faGlobe \ swastiksharma.in} \ $|$ \ 
 \href{mailto:swastkk@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ swastkk@gmail.com} \ $|$ \ 
 \href{tel:+91 9805279184}{\raisebox{-0.05\height}\faMobile \ +91 9805279184} \\
 \end{flushleft}
 
 
-%----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
 \section{Education}
 
 \begin{tabular}{lllll}
@@ -119,12 +75,10 @@
                                   
 \end{tabular}
 
-%	SKILLS
-%----------------------------------------------------------------------------------------
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
 \textbf{Languages:} &  \normalsize{Rust, GO lang, Python, C, C++, HTML, CSS, JavaScript,SQL}\\
-\textbf{Frameworks:}  &  \normalsize{Tauri, ReactJS, NextJS, Django, Flask, FastAPI, Django-REST Framework, Svelte, Hugo}\\  
+\textbf{Frameworks:}  &  \normalsize{Tauri, ReactJS, NextJS, Django, Flask, FastAPI, Django-REST Framework, Svelte, Hugo, ROS}\\  
 \textbf{Tools:} &  \normalsize{Git/GitHub, GitHub Actions, GitLab, Postman, PostgreSQL, Jinja, LATEX} \\
 \textbf{Plateforms:} &  \normalsize{Linux, Web, Windows, Raspberry Pi, Arduino}\\
 \textbf{Soft Skills:} &  \normalsize{Teamwork, Leadership, Communication}\\
@@ -138,15 +92,6 @@
 \multicolumn{2}{@{}X@{}}{Implemented Concordium blockchain with the help of concordium\_rust\_sdk in the Rust Tauri Desktop Application Concordium-lc1c and written documentation for the same.}  \\
 \end{tabularx}
 
-% \begin{tabularx}{\linewidth}{ @{}l r@{} }
-% \textbf {ISRO} & \emph{Training} \hfill July 2023 - August 2023 \\[3.75pt]
-% \multicolumn{2}{@{}X@{}}{Training at Indian Institute of Remote Sensing (IIRS), Indian Space Research Organization (ISRO) through the START programme (Space Science and Technology Awareness Training) under the course "Overview of Space Science Code-3001".}  \\
-% \end{tabularx}
-
-% \begin{tabularx}{\linewidth}{ @{}l r@{} }
-% \textbf{Luminous Power Technologies, Gagret}& \emph{Industrial Training} \hfill May 2023 - July 2023 \\[3.75pt]
-% \multicolumn{2}{@{}X@{}}{Two Month Industrial Training in Core Electrical in the Maintainance department where I learn the complete manufacturing of LEAD-ACID battery, Power-distribution system of the complete Plant LPT-1 and LPT-4 and the Role of 5S in the industry.}  \\
-% \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{ISTE-NITH} $|$ Coordinator $|$ \href{https://www.istenith.com/}{Website} &\hfill Jan 2022 - present \\[3.75pt]
