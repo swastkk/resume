@@ -1,101 +1,38 @@
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-%	The MIT License (MIT)
-%
-%	Copyright (c) 2021 Jitin Nair
-%
-%	Permission is hereby granted, free of charge, to any person obtaining a copy
-%	of this software and associated documentation files (the "Software"), to deal
-%	in the Software without restriction, including without limitation the rights
-%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%	copies of the Software, and to permit persons to whom the Software is
-%	furnished to do so, subject to the following conditions:
-%	
-%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-%	THE SOFTWARE.
-%	
-%
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-
-%----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
-%----------------------------------------------------------------------------------------
-
-% article class because we want to fully customize the page and not use a cv template
-\documentclass[legalpaper,11pt]{article}
-
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
+\documentclass[legalpaper,10.8pt]{article}
 
 %----------------------------------------------------------------------------------------
 %	PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{url}
+\usepackage{setspace}
+\usepackage{enumitem}
 \usepackage{parskip} 	
-
-%other packages for formatting
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[legalpaper, margin=0.5in]{geometry}
-
-%tabularx environment
 \usepackage{tabularx}
-
-%for lists within experience section
 \usepackage{enumitem}
-
-% centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
-
-%to prevent spillover of tabular into next pages
 \usepackage{supertabular}
-\usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
-
-%custom \section
 \usepackage{titlesec}				
 \usepackage{multicol}
 \usepackage{multirow}
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\usepackage[unicode, draft=false]{hyperref}
+\usepackage{fontawesome5}
 
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-
-%Setup hyperref package, and colours for links
-\usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 \addbibresource{citations.bib}
 \setlength\bibitemsep{1em}
-
-%for social icons
-\usepackage{fontawesome5}
-
-%debug page outer frames
-%\usepackage{showframe}
 
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
@@ -109,14 +46,8 @@
 %	TITLE
 %----------------------------------------------------------------------------------------
 
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
-
 \begin{tabularx}{\linewidth}{@{} l X @{}}
-\Huge{SWASTIK SHARMA} & \small{Open Source $|$ Programmer $|$ Linux Enthusiast} \\[6pt]
+\Huge {SWASTIK SHARMA} & \small{Open Sourcerer $|$ Software Developer $|$ Linux Enthusiast} \\[6pt]
 \hline % Horizontal rule
 \end{tabularx}
 
@@ -126,9 +57,8 @@
 \href{mailto:swastkk@gmail.com}{\raisebox{-0.05\height}{\faEnvelope} swastkk@gmail.com} $|$ 
 \href{https://github.com/swastkk}{\raisebox{-0.05\height}{\faGithub} swastkk} $|$ 
 \href{https://linkedin.com/in/swastkk}{\raisebox{-0.05\height}{\faLinkedin} swastkk} $|$ 
-\href{tel:+919805279184}{\raisebox{-0.05\height}{\faMobile} +91 9805279184}
-\ $|$ \
-\href{https://blog.swastiksharma.in/}{\raisebox{-0.05\height} Blogs {\faBlog} }
+\href{tel:+919805279184}{\raisebox{-0.05\height}{\faMobile} +91 9805279184} $|$ 
+\href{https://blog.swastiksharma.in/}{\raisebox{-0.05\height}{\faPen} Personal Blog}
 \end{flushleft}
 
 %----------------------------------------------------------------------------------------
@@ -136,114 +66,112 @@
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
+\setstretch{0.9}
 \section{Education}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{National Institute of Technology}  \hfill {Hamirpur, India}  \\
+    \textit{{Bachelor of Technology - Electrical Engineering; CGPA: 7.92/10} \hfill {December 2021 - present}}
+    \begin{itemize}[label=$\diamond$]
+        \item \small \textbf{Relevant Coursework:} \textit{Data Structures and Algorithms (DSA), Database Management Systems (DBMS), Object Oriented Programming (OOPs),  Computer Networks}
+         \item \small \textbf{Minors:} \textit{Industrial Psychology, Indian Business Environment}
+    \end{itemize}
+    \item \textbf{Govt Senior Secondary School} \hfill {Daulatpur Chowk, India} \\
+    \textit{XII HP Board; Percentage: 90\%} \hfill \textit{April 2021}
+\end{itemize}
 
-\begin{tabular}{lllll}
-\textbf{NIT Hamirpur}         & B.TECH, Electrical Engineering & CGPA: 7.92/10 & Dec 2021- present   &  \\
-\textbf{GSSS Daulatpur Chowk} & Class 12th, HP Board           & 90\%          & Apr 2019 - May 2021 &  \\
-\textbf{DAV Ambota}           & Class 10th, CBSE Board         & 96.2\%        & Apr 2010- Apr 2019  &  \\
-                                  
-\end{tabular}
-
+%----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Languages:} &  \normalsize{Python, Rust, GO lang, C, C++, HTML, CSS, JavaScript,SQL}\\
-\textbf{Frameworks:}  &  \normalsize{Tauri, ReactJS, NextJS, Django, Flask, FastAPI, Django-REST Framework, Svelte, Hugo}\\  
-\textbf{Tools:} &  \normalsize{Git/GitHub, GitHub Actions, GitLab, Postman, PostgreSQL, Jinja, LATEX} \\
-\textbf{Platforms:} &  \normalsize{Linux, Web, Windows, Raspberry Pi, Arduino}\\
-\textbf{Soft Skills:} &  \normalsize{Teamwork, Leadership, Communication}\\
-\end{tabularx}
-
-%Experience
-\section{Work Experience}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf {Athena Consulting} $|$ Backend Developer $|$ Rust, Tauri, ReactJS, Python $|$ \href{https://www.athenaconsulting.io/}{Website} &\hfill June 2023 - Sept 2023 \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Implemented Concordium blockchain with the help of concordium\_rust\_sdk in the Rust Tauri Desktop Application Concordium-lc1c and written documentation for the same.}  \\
-\end{tabularx}
-
-% \begin{tabularx}{\linewidth}{ @{}l r@{} }
-% \textbf {ISRO} & \emph{Training} \hfill July 2023 - August 2023 \\[3.75pt]
-% \multicolumn{2}{@{}X@{}}{Training at Indian Institute of Remote Sensing (IIRS), Indian Space Research Organization (ISRO) through the START programme (Space Science and Technology Awareness Training) under the course "Overview of Space Science Code-3001".}  \\
-% \end{tabularx}
-
-% \begin{tabularx}{\linewidth}{ @{}l r@{} }
-% \textbf{Luminous Power Technologies, Gagret}& \emph{Industrial Training} \hfill May 2023 - July 2023 \\[3.75pt]
-% \multicolumn{2}{@{}X@{}}{Two Month Industrial Training in Core Electrical in the Maintainance department where I learn the complete manufacturing of LEAD-ACID battery, Power-distribution system of the complete Plant LPT-1 and LPT-4 and the Role of 5S in the industry.}  \\
-% \end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{ISTE-NITH} $|$ Joint Secretary $|$ \href{https://www.istenith.com/}{Website} &\hfill Jan 2022 - present \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-Student’s Chapter of ISTE (Indian Society for Technical Education) at our institute, focusing on the technical domain and event management.
-} \\
-\end{tabularx}
-
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item Conducted many events and webinars as a part of NITH's technical society, engaging over \textbf{250 students.}
-    \item Hosted a workshop on Linux/Git and GitHub for over 150+ students.
-    \item Organised Annual Techfest "PRODYOGIKI '24" with 10+ events and \textbf{800+} participation in NIT Hamirpur.
-    \item Deployed and contributed to the production of many websites, including backend and frontend development.
+\setstretch{0.4}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Languages:} Python, Rust, GO lang, C, C++, HTML, CSS, JavaScript, SQL
+    \item \textbf{Frameworks:} Tauri, ReactJS, NextJS, Django, Flask, FastAPI, Django-REST Framework, Svelte, Hugo
+    \item \textbf{Tools:} Git/GitHub, GitHub Actions, GitLab, Postman, PostgreSQL, Jinja, LaTeX
+    \item \textbf{Platforms:} Linux, Web, Windows, Raspberry Pi, Arduino
+    \item \textbf{Soft Skills:} Brainstorming, Teamwork, Leadership, Communication
 \end{itemize}
-
-
-%Projects
-\section{Projects}
-
-% \begin{tabularx}{\linewidth}{ @{}l r@{} }
-% \textbf{AUTOMATED-CONVEYORS} & \hfill \href{https://docs.google.com/document/d/1_tlBHoUQKLN5EPN8pOeJqPVyCyxpFushJeL0-q82Ee8/edit?usp=sharing}{Link} \\[3.75pt]
-% \multicolumn{2}{@{}X@{}}{During my industrial training at LPT-Gagret, I was working on a project to automate the conveyors which used to lift the battery toward the charging area with the help of IR-Sensor PNP type and programmed in such a way that if a battery don't pass for one minute then the conveyors will automatically be turned off and hence it helped in saving the Energy in the plant. }  \\
-% \end{tabularx}
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{WALLPAPE-RS} $|$ Rust, Tauri, ReactJS & \hfill \href{https://github.com/swastkk/wallpape-rs}{Link} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Implemented on-click wallpaper changing functionality in a Rust Tauri desktop application, leveraging the Wallhaven API. This unique project offers enhanced user engagement and customization, distinguishing itself from standard system background setters by providing a specialized, user-friendly experience not available elsewhere.}  \\
-\end{tabularx}
-
-% \begin{tabularx}{\linewidth}{ @{}l r@{} }
-% \textbf{GO Microservices} & \hfill \href{https://github.com/swastkk/go_microservices}{Link} \\[3.75pt]
-% \multicolumn{2}{@{}X@{}} {Robust and Scalable microservices architecture built using the Go programming language. It leverages the power and simplicity of Go to create a modular and efficient system that can be easily extended and maintained.}  \\
-% \end{tabularx}
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{INTERVIEW'S WEBSITE} $|$ Python, Django, Docker, PostgreSQL, Celery & \hfill \href{https://github.com/istenith/join.istenith.com}{Link} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Developed and deployed a high-impact Django-based interview web application, replacing Google Forms and serving over 500 college students. Successfully utilized for over \textbf{4 interview cycles}, achieving a \textbf{30\% reduction} in administrative overhead and enhancing data security through custom application features.}  \\
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{EDU-BOT} $|$ Python, Django, PostgreSQL, HTML, CSS & \hfill \href{https://github.com/swastkk/eduBOT}{Link} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Developed eduBOT, a Python-based web-app applying NLP and machine learning to deliver precise responses.Served a diverse user base of school and college-level students, delivering over \textbf{2000+} accurate and relevant responses.}  \\
-\end{tabularx}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{PRODYOGIKI'24} $|$ NextJS, Django, DRF, Docker, PostgreSQL & \hfill \href{https://github.com/istenith/prody-frontend}{Frontend} $|$ \href{https://github.com/istenith/prody-backend}{Backend} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{
-Developed a scalable Next.js and Django Full Stack Website, accommodating \textbf{1000+ individual participants }and \textbf{150+ team } members across 10 events. Enhanced user engagement and streamlined organization processes with advanced technology integration.}  \\
-\end{tabularx}
+\setstretch{1}
 
 %----------------------------------------------------------------------------------------
-%Interests/ Keywords/ AWARDS
-\section{Awards}
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{ELECTROTHON 5.0} & \hfill April, 2023 \\
-\multicolumn{2}{@{}X@{}}{Our team achieved 2nd Runner-Up in MLH-powered Electrothon 5.0 by NIT Hamirpur's Team SPEC, \textbf{outperforming 70+} competing teams and securing a \textbf{10,000 INR cash prize.}} \\
-\end{tabularx}
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{ASCENSIO}& \hfill April, 2023 \\
-\multicolumn{2}{@{}X@{}}{Achieved 2nd runners-up position at NIT Hamirpur's Annual TechFest (NIMBUS) Open Exhibition, winning a \textbf{5,000 INR cash prize.}} \\
-\end{tabularx}
-%---------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Work Experience}
+\begin{itemize}[leftmargin=*]
 
+\item \textbf{Google Summer of Code '24 - AboutCode}  \hfill \textit{Remote} \\
+\textit{Open Source Developer (Full time)}  \hfill \textit{May 2024 - Aug 2024}
+\begin{itemize}[label=$\diamond$]
+    \item \small Improved scanning accuracy by computing summary and license clarity scores for each package and its files, rather than for the entire scan.
+    \item Enhanced package models, stored license detection references, and ensured proper attribute collection for all package ecosystems.
+\end{itemize}
+
+\item \textbf {Athena Consulting} \hfill Remote \\[3.75pt]
+\textit{Backend Developer(Internship)} \hfill \textit{June 2023 - Sept 2023}
+\begin{itemize}[label=$\diamond$]
+    \item \small Architected the implementation of Concordium's blockchain technology with Concordium Rust SDK.
+    \item \small Optimized the Rust Tauri Desktop Application's performance by reducing transaction latency by \textbf{50\%} Enhanced data security.
+\end{itemize}
+\end{itemize}
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Projects}
+\begin{itemize}[leftmargin=*]
+\item \textbf{WALLPAPE-RS} $|$ Rust, Tauri, ReactJS  \hfill \href{https://github.com/swastkk/wallpape-rs}{Link}
+{\small
+\begin{itemize}[label=$\diamond$,itemsep=0pt]
+    \item Crafted a cross-platform desktop app using Rust \& Tauri, enabling seamless wallpaper customization with a click.
+    \item Achieved a lightning-fast speed of wallpaper change, with transitions as swift as \textbf{0.5 seconds} per change. This enhancement resulted in a \textbf{25\% increase} in user engagement metrics and a \textbf{15\% decrease} in user-reported issues related to customization.
+\end{itemize}
+}
+
+\item \textbf{INTERVIEW'S WEBSITE} $|$ Python, Django, Docker, PostgreSQL, Celery  \hfill \href{https://github.com/istenith/join.istenith.com}{Link}
+{\small
+\begin{itemize}[label=$\diamond$]
+    \item Developed and deployed a high-impact Django-based interview web application, replacing Google Forms.
+    \item Served over 500 college students, utilized for over \textbf{4 interview cycles} \& Achieved a \textbf{30\% reduction} in administrative overhead and enhanced data security.
+\end{itemize}
+}
+
+\item \textbf{PRODYOGIKI'24} $|$ NextJS, Django, DRF, Docker, PostgreSQL \hfill \href{https://github.com/istenith/prody-frontend}{Frontend} $|$ \href{https://github.com/istenith/prody-backend}{Backend}
+{\small
+\begin{itemize}[label=$\diamond$]
+    \item Developed a scalable Next.js and Django Full Stack Website for College Fest \textbf{Prodyogiki'24} at NITH.
+    \item Accommodated \textbf{1000+ individual participants} and \textbf{150+ team} members across 10 events \& Enhanced user engagement and streamlined organization processes.
+\end{itemize}
+}
+\end{itemize}
+%----------------------------------------------------------------------------------------
+%	AWARDS
+%----------------------------------------------------------------------------------------
+\section{Honors and Awards}
+\begin{itemize}[leftmargin=*]
+\item Google Summer of Code 2024 Scholar
+\item Second Runner at \textbf{ASCENSIO}, Open Exhibition conducted under Annual Technical Fest of NIT Hamirpur -April 2023
+\item Finalist in Hack.AI at TECHFEST IIT Bombay 2023, led a team to develop solutions, resulting in a 30\% efficiency boost, ranking top 50 nationwide among \textbf{300+ teams}.
+ \item Ranked in the top 10 nationwide teams at Hackathon Hack it out, at TECHNEX, IIT-BHU -March 2023.
+\item {2nd Runner-Up at Electrothon 5.0, NIT Hamirpur, outperforming \textbf{70+} teams \& secured MLH Fellowship Interview.}
+\end{itemize}
+\setstretch{1}
+
+%----------------------------------------------------------------------------------------
 %	EXTRA CURRICULAR AND POSITION OF RESPONSIBILITY
 %----------------------------------------------------------------------------------------
 \section{Extra Curricular $|$ \normalsize{Position of Responsibility}}
-\begin{itemize}[leftmargin=*]
-    \item \textbf {Team Lead}| Finalist in Hack.AI at TECHFEST IIT BOMBAY, Dec 2023
-    \item \textbf {Open Source Developer} | GNU/Linux User's Group, NIT Hamirpur
-    \item \textbf {Team Lead}| Participated in HACK IT OUT in IIT-BHU Techfest i.e. TECHNEX, Mar 2023
 
+\begin{itemize}[leftmargin=*, itemsep=0em]
+    \item \textbf {Joint Secretary at ISTE NITH} \hfill Hamirpur, India\\
+    \textit{Organised many events like Hult Prize'23, Prodyogiki'24 with more than 1000+ registrations. \hfill January 2022 - present}
+    
+    \item \textbf {Training \& Placement Representative} \hfill Hamirpur, India\\
+    \textit{ \small Managed relations between the Placement Cell, 50+ recruiters, and \textbf{850+} students. \hfill April 2024 - present}
+    
+    \item \textbf{Member at GLUG-NITH} \hfill Hamirpur, India\\
+    \textit {\small Organised Open Source Month'23 with more than \textbf{150+} new contributors. \hfill January 2022 - present} 
 \end{itemize}
-
+\setstretch{1}
 
 
 \end{document}
+ 
