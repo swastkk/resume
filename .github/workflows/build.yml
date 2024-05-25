@@ -4,7 +4,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Edit here with the names of your latex file and directory (can use ".")
       DIR: .
       FILE: cv
     steps:
@@ -67,7 +66,7 @@ jobs:
           name: cv.pdf
           path: ./github_artifacts
       - name: Move PDF to Pages Directory
-        run: mv ./github_artifacts/cv.pdf ./github_deploy/
+        run: mv ./github_artifacts/cv.pdf ./github_deploy/cv.pdf
       - name: Commit and Push Changes
         run: |
           git config --local user.email "actions@github.com"
