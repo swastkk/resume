@@ -13,18 +13,18 @@ jobs:
       DIR: .
       FILE: cv
     steps:
-      - name: Set up Git repository
+      - name: Checkout
         uses: actions/checkout@v3
-      
+
       - name: Build CV
         uses: dante-ev/latex-action@latest
         with:
           root_file: ${{ env.FILE }}
           working_directory: ${{ env.DIR }}
-      
+
       - name: Move PDF to artifacts folder
         run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
-      
+
       - name: Upload PDF as artifact
         uses: actions/upload-artifact@v3
         with:
@@ -32,20 +32,25 @@ jobs:
           path: ./github_artifacts/
 
   deploy:
-    needs: [build]
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      
+
       - name: Download CV PDF artifact
         uses: actions/download-artifact@v3
         with:
           name: cv.pdf
           path: github_artifacts/
-      
+
       - name: Move PDF to deployment folder
         run: mkdir -p github_deploy && mv github_artifacts/cv.pdf github_deploy/
+
+      - name: Copy index.html and CNAME
+        run: |
+          cp index.html github_deploy/ || true
+          cp CNAME github_deploy/ || true
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -55,17 +60,3 @@ jobs:
           publish_branch: gh-pages
           force_orphan: true
           enable_jekyll: true
-
-  copy-index-to-build:
-    needs: [deploy]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      
-      - name: Copy To Branches Action
-        uses: planetoftheweb/copy-to-branches@v1.3
-        env:
-          key: main
-          files: index.html CNAME
