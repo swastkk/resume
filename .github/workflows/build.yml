@@ -22,6 +22,7 @@ jobs:
         with:
           name: ${{ env.FILE }}.pdf
           path: ./github_artifacts
+
   deploy:
     needs: [build]
     runs-on: ubuntu-latest
@@ -41,6 +42,7 @@ jobs:
           publish_branch: build
           force_orphan: true
           enable_jekyll: true
+
   copy-index-to-build:
     needs: [deploy]
     runs-on: ubuntu-latest
@@ -53,3 +55,23 @@ jobs:
         env:
           key: main
           files: index.html CNAME
+
+  copy-pdf-to-pages:
+    needs: [deploy]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - uses: actions/download-artifact@v3
+        with:
+          name: cv.pdf
+          path: ./github_artifacts
+      - name: Move PDF to Pages Directory
+        run: mv ./github_artifacts/cv.pdf ./github_deploy/
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add .
+          git commit -m "Add CV PDF"
+          git push origin build
