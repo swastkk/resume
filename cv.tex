@@ -32,7 +32,7 @@
 \setlength{\fullcollw}{0.47\textwidth}
 
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titlespacing{\section}{0pt}{10pt}{8pt}
 
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
@@ -105,10 +105,10 @@
 \begin{itemize}[leftmargin=*]
 
 \item \textbf{Google Summer of Code '24 - AboutCode}  \hfill {Remote} \\
-\textit{Open Source Developer (Full time)}  \hfill \textit{May 2024 - present}
+\textit{Open Source Developer (Full time)}  \hfill \textit{May 2024 - August 2024}
 \begin{itemize}[label=$\diamond$]
-    \item \small Boosted scanning precision \textbf{40\%} by implementing detailed package and file-level summary and license clarity scores, resulting in more accurate and reliable scan results for compliance analysis
-    \item Enhanced package models for hundreds of packages, stored numerous license detection references, and ensured accurate attribute collection across all major package ecosystems, resulting in a \textbf{25\%} improvement in data integrity and compliance.
+    \item \small Increased scanning precision by \textbf{40\%} through detailed package/file-level summaries \& improving accuracy for SCA.
+    \item Improved package assembly detection to ensure accurate and reliable results, with over 20+ tests added to validate the process across various ecosystems.
 
 \end{itemize}
 
@@ -123,28 +123,35 @@
 %	PROJECTS
 %----------------------------------------------------------------------------------------
 \section{Projects}
+% \begin{itemize}[leftmargin=*]
+% \item \textbf{WALLPAPE-RS} $|$ Rust, Tauri, ReactJS  \hfill \href{https://github.com/swastkk/wallpape-rs}{Link}
+% {\small
+% \begin{itemize}[label=$\diamond$,itemsep=0pt]
+%     \item Crafted a cross-platform desktop app using Rust \& Tauri, enabling seamless wallpaper customization with a click.
+%     \item Achieved a lightning-fast speed of wallpaper change, with transitions as swift as \textbf{0.5 seconds} per change. This enhancement resulted in a \textbf{25\% increase} in user engagement metrics and a \textbf{15\% decrease} in user-reported issues related to customization.
+% \end{itemize}
+% }
 \begin{itemize}[leftmargin=*]
-\item \textbf{WALLPAPE-RS} $|$ Rust, Tauri, ReactJS  \hfill \href{https://github.com/swastkk/wallpape-rs}{Link}
+\item \textbf{Package Summary} $|$ Python, Packaging, Package Ecosystems  \hfill \href{https://github.com/aboutcode-org/scancode-toolkit}{Link}
 {\small
 \begin{itemize}[label=$\diamond$,itemsep=0pt]
-    \item Crafted a cross-platform desktop app using Rust \& Tauri, enabling seamless wallpaper customization with a click.
-    \item Achieved a lightning-fast speed of wallpaper change, with transitions as swift as \textbf{0.5 seconds} per change. This enhancement resulted in a \textbf{25\% increase} in user engagement metrics and a \textbf{15\% decrease} in user-reported issues related to customization.
+    \item Computed a package-level summary that includes the calculation of License Clarity Score and the population of various package attributes such as copyrights, holders, notice texts, and other license expressions.
+    \item Architected and refactored the code to ensure that various package ecosystems like npm, Python (whl), Rubygems, and many more can be handled properly.
+    \item Developed robust tests for 20+ package ecosystems to ensure reliability and accuracy.
 \end{itemize}
 }
-
-\item \textbf{APPLI-FORM} $|$ Python, Django, Docker, PostgreSQL, Celery  \hfill \href{https://github.com/istenith/join.istenith.com}{Link}
+\item \textbf{Prodyogiki'24} $|$ NextJS, Django, DRF, Docker, PostgreSQL \hfill \href{https://github.com/istenith/prody-frontend}{Frontend} $|$ \href{https://github.com/istenith/prody-backend}{Backend}
 {\small
 \begin{itemize}[label=$\diamond$]
-    \item Utilized Django backend tools for Appli-form(similar to Google Forms) and reduced field customization time by \textbf{50\%}.
-    \item Served over 500 college students, utilized for over \textbf{4 interview cycles} \& Achieved a \textbf{30\% reduction} in administrative overhead and established data security.
-\end{itemize}
-}
-
-\item \textbf{PRODYOGIKI'24} $|$ NextJS, Django, DRF, Docker, PostgreSQL \hfill \href{https://github.com/istenith/prody-frontend}{Frontend} $|$ \href{https://github.com/istenith/prody-backend}{Backend}
-{\small
-\begin{itemize}[label=$\diamond$]
-    \item Developed a scalable Next.js and Django Full Stack Website for College Fest \textbf{Prodyogiki'24} at NITH.
+    \item Developed a scalable NextJS and Django Full Stack Website for College Fest \textbf{Prodyogiki'24} at NITH.
     \item Accommodated \textbf{1000+ individual participants} and \textbf{150+ team} members across 10 events \& increased user engagement and streamlined organization processes.
+\end{itemize}
+}
+\item \textbf{Application Portal} $|$ Python, Django, Docker, PostgreSQL, Celery  \hfill \href{https://github.com/istenith/join.istenith.com}{Link}
+{\small
+\begin{itemize}[label=$\diamond$]
+    \item Utilized Django backend tools for Application Portal(similar to Google Forms) and reduced field customization time by \textbf{50\%}.
+    \item Served over 500 college students, utilized for over \textbf{6 interview cycles} \& Achieved a \textbf{30\% reduction} in administrative overhead and established data security.
 \end{itemize}
 }
 \end{itemize}
