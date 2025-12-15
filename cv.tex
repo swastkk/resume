@@ -1,29 +1,18 @@
-%----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
-%----------------------------------------------------------------------------------------
-
-% article class because we want to fully customize the page and not use a cv template
 \documentclass[7pt, legalpaper]{article}
 \usepackage[
-    ignoreheadfoot, % set margins without considering header and footer
-    top=0.8 cm, % seperation between body and page edge from the top
-    bottom=0.8 cm, % seperation between body and page edge from the bottom
-    left=1.4 cm, % seperation between body and page edge from the left
-    right=1.4 cm, % seperation between body and page edge from the right
-    footskip=1 cm, % seperation between body and footer
-    % showframe % for debugging 
-]{geometry} % for adjusting page geometry
-%----------------------------------------------------------------------------------------
-%	PACKAGES
-%----------------------------------------------------------------------------------------
+    ignoreheadfoot, 
+    top=0.8 cm, 
+    bottom=0.8 cm, 
+    left=1.4 cm,
+    right=1.4 cm, 
+    footskip=1 cm,
+]{geometry} 
 \usepackage{url}
 \usepackage{setspace}
 \usepackage{enumitem}
 \usepackage{parskip} 	
 \RequirePackage{color}
 \RequirePackage{graphicx}
-% \usepackage[usenames,dvipsnames]{xcolor}
-% \usepackage[legalpaper, margin=0.9in]{geometry}
 \usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{supertabular}
@@ -34,7 +23,6 @@
 \usepackage[unicode, draft=false]{hyperref}
 \usepackage{fontawesome5}
 
-% centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
@@ -47,21 +35,10 @@
 \addbibresource{citations.bib}
 \setlength\bibitemsep{1em}
 
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
 \begin{document}
 
-% non-numbered pages
+
 \pagestyle{empty} 
-
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
-
-% \begin{center}
-% \huge \textcolor{blue}{Swastik Sharma}
-% \end{center}
 
 \begin{center}
 \huge {\textbf{Swastik Sharma}}
@@ -69,7 +46,6 @@
 
 
 \begin{center}
-% Using \href with Font Awesome icons
 \href{https://www.swastiksharma.in}{\raisebox{-0.05\height}{\faGlobe} swastiksharma.in} $|$ 
 \href{mailto:swastkk@gmail.com}{\raisebox{-0.05\height}{\faEnvelope} swastkk@gmail.com} $|$ 
 \href{https://github.com/swastkk}{\raisebox{-0.05\height}{\faGithub} swastkk} $|$ 
@@ -81,40 +57,17 @@
 \begin{center}
     \small VPO Marwari, District UNA, Himachal Pradesh, INDIA
 \end{center}
-
-\section{Education}
-\textbf{Indian Institute of Technology}  \hfill {Mandi, India}  \\
-    \textit{{Minor in Computer Science Engineering \&\ Next Gen technologies Program} \hfill {October 2024 - present}}
-  \begin{itemize}[leftmargin=*,label=$\diamond$]
-    \item \small \textbf{Relevant Coursework:} \textit{Data Structures and Algorithms (DSA), Database Management Systems (DBMS), Object Oriented Programming (OOPs),  Computer Networks, System Architecture}
-\end{itemize}
- \textbf{National Institute of Technology}  \hfill {Hamirpur, India}  \\
-    \textit{{Bachelor of Technology - Electrical Engineering; CGPA: 8.15/10} \hfill {December 2021 - May 2025}}
-    % \begin{itemize}[leftmargin=*,label=$\diamond$]
-    %     \item \small \textbf{Relevant Coursework:} \textit{Assembly Language Programming-8085, Power System Analysis, Power Electronics}
-    %      \item \small \textbf{Minor Subjects:} \textit{Engineering Economics \& Accountancy, Industrial Psychology, Indian Business Environment, Organisational Behaviour}
-    % \end{itemize}
-%     \item \textbf{Govt Senior Secondary School} \hfill {Daulatpur Chowk, India} \\
-%     \textit{XII HP Board; Percentage: 90\%} \hfill \textit{April 2021}
-
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Languages:} Python, C, C++, Go-lang, Rust, HTML, CSS, JavaScript, SQL
-    \item \textbf{Frameworks:} Django, Flask, FastAPI, Django-REST Framework, LangChain, Tauri, ReactJS, NextJS, Svelte, Hugo
-    \item \textbf{Tools:} Git/GitHub, Apache Zookeeper, Redis, GitHub Actions, GitLab, PGVector, Jinja, LaTeX
-    \item \textbf{Platforms:} Linux, Web, Windows, Raspberry Pi, Arduino, AWS
-    % \item \textbf{Soft Skills:} Brainstorming, Teamwork, Leadership, Communication
-\end{itemize}
-
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE
-%----------------------------------------------------------------------------------------
 \section{Work Experience}
 \begin{itemize}[leftmargin=*]
 
+\item \textbf{Q3 Technolgies Private Limited} \hfill {Gurugram, Haryana} \\
+\textit{Software Engineer(Full-Time)} \hfill \textit{Dec 2025 - present}
+\begin{itemize}[label=$\diamond$]
+\item Designed, developed, and maintained scalable backend services using Python, following clean architecture and modular design principles.
+\item Built and optimized RESTful APIs to support high-traffic client applications, ensuring reliability, security, and performance.
+\item Integrated backend systems with AWS cloud services such as EC2, S3, RDS, Lambda, CloudWatch, and IAM.
+
+\end{itemize}
 \item \textbf{Valiant Fintech Pvt. Ltd. | BeyondIRR}  \hfill {Mumbai, Maharashtra} \\
 \textit{SDE Intern(Hybrid)}  \hfill \textit{Sept 2024 - August 2025}
 \begin{itemize}[label=$\diamond$]
@@ -138,16 +91,8 @@
     \item Improved package assembly detection with over \textbf{25,000+} passing tests for reliable results across ecosystems.
 
 \end{itemize}
-
-% \item \textbf {Athena Consulting} \hfill Remote \\[3.75pt]
-% \textit{Backend Developer(Internship)} \hfill \textit{June 2023 - September 2023}
-% \begin{itemize}[label=$\diamond$]
-%     \item \small Directed the integration of Concordium blockchain technology via Concordium Rust SDK and Optimized the Rust Tauri Desktop Application's performance.
 \end{itemize}
-% \end{itemize}
-%----------------------------------------------------------------------------------------
-%	PROJECTS
-%----------------------------------------------------------------------------------------
+
 \section{Projects}
 
 \begin{itemize}[leftmargin=*]
@@ -177,6 +122,37 @@
 \end{itemize}
 }
 \end{itemize}
+\section{Skills}
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Languages:} Python, C, C++, Go-lang, Rust, HTML, CSS, JavaScript, SQL
+    \item \textbf{Frameworks:} Django, Flask, FastAPI, Django-REST Framework, LangChain, Tauri, ReactJS, NextJS, Svelte, Hugo
+    \item \textbf{Tools:} AWS SNS/SQS/Lambda/EC2, Git/GitHub, Apache Zookeeper, Redis, GitHub Actions, GitLab, PGVector
+    \item \textbf{Platforms:} Linux, Web, Windows, Raspberry Pi, Arduino, AWS
+    % \item \textbf{Soft Skills:} Brainstorming, Teamwork, Leadership, Communication
+\end{itemize}
+
+\section{Education}
+\textbf{Indian Institute of Technology}  \hfill {Mandi, India}  \\
+    \textit{{Minor in Computer Science Engineering \&\ Next Gen technologies Program} \hfill {October 2024 - October 2025}}
+  \begin{itemize}[leftmargin=*,label=$\diamond$]
+    \item \small \textbf{Relevant Coursework:} \textit{Data Structures and Algorithms (DSA), Database Management Systems (DBMS), Object Oriented Programming (OOPs),  Computer Networks, System Architecture}
+\end{itemize}
+ \textbf{National Institute of Technology}  \hfill {Hamirpur, India}  \\
+    \textit{{Bachelor of Technology - Electrical Engineering; CGPA: 8.15/10} \hfill {December 2021 - May 2025}}
+    % \begin{itemize}[leftmargin=*,label=$\diamond$]
+    %     \item \small \textbf{Relevant Coursework:} \textit{Assembly Language Programming-8085, Power System Analysis, Power Electronics}
+    %      \item \small \textbf{Minor Subjects:} \textit{Engineering Economics \& Accountancy, Industrial Psychology, Indian Business Environment, Organisational Behaviour}
+    % \end{itemize}
+%     \item \textbf{Govt Senior Secondary School} \hfill {Daulatpur Chowk, India} \\
+%     \textit{XII HP Board; Percentage: 90\%} \hfill \textit{April 2021}
+
+
+
+% \item \textbf {Athena Consulting} \hfill Remote \\[3.75pt]
+% \textit{Backend Developer(Internship)} \hfill \textit{June 2023 - September 2023}
+% \begin{itemize}[label=$\diamond$]
+%     \item \small Directed the integration of Concordium blockchain technology via Concordium Rust SDK and Optimized the Rust Tauri Desktop Application's performance.
+% \end{itemize}
 
 \section{Honors and Awards}
 \begin{enumerate}[leftmargin=*, itemsep=0em]
@@ -188,18 +164,18 @@
     \item Runners-Up at Electrothon 5.0, NIT Hamirpur, outperforming \textbf{70+} teams \& secured MLH Fellowship Interview.
 \end{enumerate}
 
-\section{Extra Curricular $|$ \normalsize{Position of Responsibility}}
+% \section{Extra Curricular $|$ \normalsize{Position of Responsibility}}
 
-\begin{itemize}[leftmargin=*, itemsep=0em]
-    \item \normalsize{\textbf {Joint Secretary at Indian Society for Technical Education,} \textit{Student's Chapter} \hfill Hamirpur, India}\\
-    \small \textit {Organised many events like Hult Prize, Prodyogiki with \textbf{1500+} participants. \hfill January 2022 - May 2025}
+% \begin{itemize}[leftmargin=*, itemsep=0em]
+%     \item \normalsize{\textbf {Joint Secretary at Indian Society for Technical Education,} \textit{Student's Chapter} \hfill Hamirpur, India}\\
+%     \small \textit {Organised many events like Hult Prize, Prodyogiki with \textbf{1500+} participants. \hfill January 2022 - May 2025}
     
-    \item \normalsize{\textbf {Training \& Placement Representative, NIT Hamirpur} \hfill Hamirpur, India}\\
-    \small \textit{ Managed relations between the Placement Cell, 50+ recruiters, and \textbf{850+} students. \hfill April 2024 - May 2025}
+%     \item \normalsize{\textbf {Training \& Placement Representative, NIT Hamirpur} \hfill Hamirpur, India}\\
+%     \small \textit{ Managed relations between the Placement Cell, 50+ recruiters, and \textbf{850+} students. \hfill April 2024 - May 2025}
     
-    \item  \normalsize{\textbf{Member at GNU/Linux User's Group, NITH} \hfill Hamirpur, India}\\
-    \small \textit {Organised Open Source Month'23 with more than \textbf{150+} new contributors. \hfill January 2022 - May 2025}
-\end{itemize}
+%     \item  \normalsize{\textbf{Member at GNU/Linux User's Group, NITH} \hfill Hamirpur, India}\\
+%     \small \textit {Organised Open Source Month'23 with more than \textbf{150+} new contributors. \hfill January 2022 - May 2025}
+% \end{itemize}
 
 \end{document}
  
